@@ -24,18 +24,18 @@ resource "aws_iam_role" "externalsecrets-role" {
       Version = "2012-10-17"
       Statement = [
         {
-	        // Read access to all secrets in the secrets manager
+          // Read access to all secrets in the secrets manager
           Effect   = "Allow"
           Resource = "*"
-          Action   = [
-	        "secretsmanager:GetRandomPassword",
+          Action = [
+            "secretsmanager:GetRandomPassword",
             "secretsmanager:GetResourcePolicy",
             "secretsmanager:GetSecretValue",
             "secretsmanager:DescribeSecret",
             "secretsmanager:ListSecretVersionIds",
             "secretsmanager:ListSecrets",
             "secretsmanager:BatchGetSecretValue"
-	     ]
+          ]
         },
       ]
     })
