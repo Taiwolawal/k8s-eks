@@ -71,8 +71,8 @@ sg-name             = "mysql-rds-sg"
 create              = true
 ingress_cidr_blocks = ["10.0.3.0/24", "10.0.4.0/24"]
 egress_cidr_blocks  = ["10.0.0.0/16"]
-ingress_rules       = [/*"http-80-tcp",*/]
-egress_rules        = [/*"http-80-tcp",*/]
+ingress_rules       = []
+egress_rules        = []
 ingress_with_cidr_blocks = [
   {
     from_port   = 3306
